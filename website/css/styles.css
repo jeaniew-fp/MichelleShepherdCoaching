@@ -426,13 +426,27 @@ h2.center { margin-left: auto; margin-right: auto; }
 .approach-copy { font-size: 1.08rem; color: var(--text-muted); margin-bottom: 40px; }
 
 .approach-foundation {
-  text-align: left;
-  max-width: 900px;
+  text-align: center;
+  max-width: 1000px;
   margin: 48px auto 0;
-  background: var(--cream);
-  border: 1px solid var(--border-soft);
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+.approach-diagram-container {
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.approach-diagram-image {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
   border-radius: var(--radius-md);
-  padding: 40px 36px;
 }
 .approach-foundation h3 {
   font-size: 1.4rem;
