@@ -29,24 +29,3 @@ revealEls.forEach(el => observer.observe(el));
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Contact form -> opens email client with prefilled message
-const contactForm = document.getElementById('contactForm');
-contactForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const phone = document.getElementById('phone').value.trim();
-  const message = document.getElementById('message').value.trim();
-
-  const subject = `Website Inquiry from ${name}`;
-  const bodyLines = [
-    `Name: ${name}`,
-    `Email: ${email}`,
-    phone ? `Phone: ${phone}` : null,
-    '',
-    message
-  ].filter(Boolean);
-
-  const mailtoUrl = `mailto:michelleshepcoaching@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
-  window.location.href = mailtoUrl;
-});
