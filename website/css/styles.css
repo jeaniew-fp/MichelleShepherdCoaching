@@ -110,6 +110,41 @@ h2.center { margin-left: auto; margin-right: auto; }
   text-transform: uppercase;
   color: var(--rust);
 }
+
+/* Logo with mark */
+.logo-with-mark {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-direction: row;
+}
+.logo-mark {
+  flex-shrink: 0;
+  display: block;
+}
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.logo-name {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1;
+}
+.logo-subtitle {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--rust);
+}
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -218,6 +253,16 @@ h2.center { margin-left: auto; margin-right: auto; }
   margin-top: 8px;
 }
 .hero .btn-ghost { color: var(--text-light); }
+
+.hero-mark {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: flex-start;
+}
+.hero-mark img {
+  display: block;
+  opacity: 0.9;
+}
 
 .hero-media { display: flex; justify-content: center; }
 .photo-card {
@@ -678,6 +723,16 @@ h2.center { margin-left: auto; margin-right: auto; }
   padding-bottom: 28px;
   border-bottom: 1px solid rgba(248,245,238,0.15);
   margin-bottom: 24px;
+}
+.footer-branding {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.footer-logo-img {
+  display: block;
+  max-width: 280px;
+  height: auto;
 }
 .footer-logo { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; margin: 0; }
 .footer-tag { color: rgba(248,245,238,0.65); font-size: 0.85rem; margin: 4px 0 0; }
