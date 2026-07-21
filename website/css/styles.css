@@ -477,8 +477,8 @@ h2.center { margin-left: auto; margin-right: auto; }
 }
 
 /* ===== About ===== */
-.about { background: linear-gradient(135deg, var(--sage) 0%, var(--sage-dark) 100%); color: var(--text-light); padding: clamp(60px, 8vw, 100px) 0; }
-.about .eyebrow { color: #D69A73; }
+.about { background: white; color: var(--text-dark); padding: clamp(60px, 8vw, 100px) 0; }
+.about .eyebrow { color: var(--rust); }
 .about-grid {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
@@ -488,32 +488,32 @@ h2.center { margin-left: auto; margin-right: auto; }
 .about-media { position: sticky; top: 100px; }
 .photo-card-sm { max-width: 320px; margin-bottom: 28px; }
 .credential-list {
-  background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(168,84,47,0.08);
+  border: 1px solid var(--border-soft);
   border-radius: var(--radius-md);
   padding: 24px 26px;
   max-width: 320px;
 }
 .credential-list-title {
   font-weight: 600;
-  color: #D69A73;
+  color: var(--rust);
   text-transform: uppercase;
   font-size: 0.75rem;
   letter-spacing: 0.1em;
   margin-bottom: 12px;
 }
 .credential-list ul { margin: 0; padding-left: 18px; }
-.credential-list li { margin-bottom: 8px; font-size: 0.93rem; color: rgba(248,245,238,0.85); }
+.credential-list li { margin-bottom: 8px; font-size: 0.93rem; color: var(--text-muted); }
 
-.about-copy h2 { font-size: clamp(1.7rem, 3vw, 2.2rem); color: var(--text-light); }
-.about-copy p { color: rgba(248,245,238,0.88); }
+.about-copy h2 { font-size: clamp(1.7rem, 3vw, 2.2rem); color: var(--text-dark); }
+.about-copy p { color: var(--text-dark); }
 .about-copy blockquote {
-  border-left: 3px solid #D69A73;
+  border-left: 3px solid var(--rust);
   padding-left: 20px;
   margin: 28px 0;
   font-style: italic;
   font-size: 1.15rem;
-  color: rgba(248,245,238,0.95);
+  color: var(--rust-dark);
 }
 
 /* ===== Help / cards ===== */
