@@ -29,3 +29,43 @@ revealEls.forEach(el => observer.observe(el));
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// Lead Magnet Modal
+const modal = document.getElementById('leadMagnetModal');
+const leadMagnetBtn = document.getElementById('leadMagnetBtn');
+const modalClose = document.getElementById('modalClose');
+const leadForm = document.getElementById('leadForm');
+let modalShown = false;
+
+// Open modal
+function openModal() {
+  modal.classList.add('active');
+  modalShown = true;
+  localStorage.setItem('leadMagnetShown', 'true');
+}
+
+// Close modal
+function closeModal() {
+  modal.classList.remove('active');
+}
+
+// Button click
+leadMagnetBtn.addEventListener('click', openModal);
+
+// Close button
+modalClose.addEventListener('click', closeModal);
+
+// Click outside modal to close
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) closeModal();
+});
+
+// Show modal after 20 seconds (only once per session)
+if (!localStorage.getItem('leadMagnetShown')) {
+  setTimeout(openModal, 20000);
+}
+
+// Form submission tracking (optional)
+leadForm.addEventListener('submit', (e) => {
+  localStorage.setItem('leadMagnetSubmitted', 'true');
+});
+

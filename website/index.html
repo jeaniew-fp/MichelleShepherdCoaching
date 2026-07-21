@@ -203,6 +203,18 @@
     <p>If you&rsquo;re here because your teenager is struggling and you feel out of answers: you&rsquo;re not alone, and this isn&rsquo;t as hopeless as it feels right now.</p>
   </section>
 
+  <!-- LEAD MAGNET CTA -->
+  <section class="lead-magnet-cta reveal">
+    <div class="section-inner">
+      <div class="lead-magnet-container">
+        <h3>Get Your Free Guide</h3>
+        <p><strong>The Connection & Boundaries Balance:</strong> How to Hold Both Without Losing Your Teen</p>
+        <p class="guide-desc">A practical guide grounded in 20+ years of family crisis work. Discover the three principles that transform parent-teen dynamics.</p>
+        <button class="btn btn-primary btn-large" id="leadMagnetBtn">Download Free Guide</button>
+      </div>
+    </div>
+  </section>
+
   <!-- ABOUT -->
   <section class="about" id="about">
     <div class="section-inner about-grid">
@@ -439,6 +451,30 @@
       </form>
     </div>
   </section>
+
+  <!-- LEAD MAGNET MODAL -->
+  <div class="modal" id="leadMagnetModal">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <div class="modal-inner">
+        <h2>Get Your Free Guide</h2>
+        <p><strong>The Connection & Boundaries Balance</strong></p>
+        <p class="modal-subtext">How to Hold Both Without Losing Your Teen</p>
+        <p class="modal-desc">A practical guide from someone who's been in the room during families' hardest moments. Learn the three principles that transform parent-teen dynamics.</p>
+
+        <form class="lead-form" id="leadForm" action="https://formspree.io/f/xdaqdgbp" method="POST">
+          <label for="leadName">First Name</label>
+          <input type="text" id="leadName" name="name" required placeholder="Your name">
+
+          <label for="leadEmail">Email Address</label>
+          <input type="email" id="leadEmail" name="email" required placeholder="your@email.com">
+
+          <button type="submit" class="btn btn-primary btn-block">Send Me the Guide</button>
+          <p class="form-note">We'll send your guide directly to your email (plus occasional tips for parents)</p>
+        </form>
+      </div>
+    </div>
+  </div>
 
 </main>
 
