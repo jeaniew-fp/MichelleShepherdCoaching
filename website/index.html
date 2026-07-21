@@ -198,19 +198,20 @@
     </div>
   </section>
 
-  <!-- INTRO STRIP -->
-  <section class="intro-strip reveal">
-    <p>If you&rsquo;re here because your teenager is struggling and you feel out of answers: you&rsquo;re not alone, and this isn&rsquo;t as hopeless as it feels right now.</p>
-  </section>
-
-  <!-- LEAD MAGNET CTA -->
-  <section class="lead-magnet-cta reveal">
+  <!-- INTRO + LEAD MAGNET COMBINED -->
+  <section class="hero-cta reveal">
     <div class="section-inner">
-      <div class="lead-magnet-container">
-        <h3>Get Your Free Guide</h3>
-        <p><strong>The Connection & Boundaries Balance:</strong> How to Hold Both Without Losing Your Teen</p>
-        <p class="guide-desc">A practical guide grounded in 20+ years of family crisis work. Discover the three principles that transform parent-teen dynamics.</p>
-        <button class="btn btn-primary btn-large" id="leadMagnetBtn">Download Free Guide</button>
+      <div class="hero-cta-inner">
+        <p class="hero-cta-intro">If you&rsquo;re here because your teenager is struggling and you feel out of answers: you&rsquo;re not alone, and this isn&rsquo;t as hopeless as it feels right now.</p>
+
+        <div class="hero-cta-divider"></div>
+
+        <div class="hero-cta-content">
+          <h2>Get Your Free Guide</h2>
+          <p class="hero-cta-subtitle"><strong>The Connection & Boundaries Balance:</strong> How to Hold Both Without Losing Your Teen</p>
+          <p class="hero-cta-desc">A practical guide grounded in 20+ years of family crisis work. Discover the three principles that transform parent-teen dynamics.</p>
+          <button class="btn btn-primary btn-large" id="leadMagnetBtn" style="cursor: pointer; margin-top: 24px;">Download Free Guide</button>
+        </div>
       </div>
     </div>
   </section>
@@ -290,6 +291,9 @@
           <h3>Flexible Coaching Sessions</h3>
           <p>In-person in the Salem, Oregon area, or online for families anywhere across the United States, whatever fits your life right now.</p>
         </div>
+      </div>
+      <div style="text-align: center; margin-top: 48px;">
+        <button class="btn btn-primary btn-large" id="leadMagnetBtn2" style="cursor: pointer;">Get Your Free Guide</button>
       </div>
     </div>
   </section>
@@ -452,31 +456,33 @@
     </div>
   </section>
 
-  <!-- LEAD MAGNET MODAL -->
-  <div class="modal" id="leadMagnetModal">
-    <div class="modal-content">
-      <button class="modal-close" id="modalClose">&times;</button>
-      <div class="modal-inner">
-        <h2>Get Your Free Guide</h2>
-        <p><strong>The Connection & Boundaries Balance</strong></p>
-        <p class="modal-subtext">How to Hold Both Without Losing Your Teen</p>
-        <p class="modal-desc">A practical guide from someone who's been in the room during families' hardest moments. Learn the three principles that transform parent-teen dynamics.</p>
-
-        <form class="lead-form" id="leadForm" action="https://formspree.io/f/xdaqdgbp" method="POST">
-          <label for="leadName">First Name</label>
-          <input type="text" id="leadName" name="name" required placeholder="Your name">
-
-          <label for="leadEmail">Email Address</label>
-          <input type="email" id="leadEmail" name="email" required placeholder="your@email.com">
-
-          <button type="submit" class="btn btn-primary btn-block">Send Me the Guide</button>
-          <p class="form-note">We'll send your guide directly to your email (plus occasional tips for parents)</p>
-        </form>
-      </div>
-    </div>
-  </div>
+  <!-- JOTFORM EMBED -->
+  <script src="https://cdn.jotfor.ms/s/static/latest/static/feedback2.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    var JFL_262013893023046 = new JotformFeedback({
+      formId: '262013893023046',
+      base: 'https://form.jotform.com/',
+      windowTitle: 'Get Your Free Guide',
+      backgroundColor: '#6E7C55',
+      fontColor: '#FFFFFF',
+      type: 'false',
+      height: 500,
+      width: 700,
+      openOnLoad: false
+    });
+  </script>
+  <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
+  <script>window.jotformEmbedHandler("iframe[id='262013893023046']", "https://form.jotform.com/")</script>
 
 </main>
+
+<!-- LEAD MAGNET MODAL -->
+<div class="modal" id="leadMagnetModal">
+  <div class="modal-content modal-content-form">
+    <button class="modal-close" id="modalClose">&times;</button>
+    <iframe id="jotformIframe" title="Get Your Free Guide" onload="window.parent.scrollTo(0,0)" allowtransparency="true" allowfullscreen="true" allow="geolocation; microphone; camera" src="https://form.jotform.com/262013893023046" frameborder="0" style="width:100%; height:100%; border:none; border-radius: 16px;"></iframe>
+  </div>
+</div>
 
 <footer class="site-footer">
   <div class="section-inner footer-inner">

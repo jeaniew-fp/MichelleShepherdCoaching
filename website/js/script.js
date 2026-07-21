@@ -32,8 +32,8 @@ document.getElementById('year').textContent = new Date().getFullYear();
 // Lead Magnet Modal
 const modal = document.getElementById('leadMagnetModal');
 const leadMagnetBtn = document.getElementById('leadMagnetBtn');
+const leadMagnetBtn2 = document.getElementById('leadMagnetBtn2');
 const modalClose = document.getElementById('modalClose');
-const leadForm = document.getElementById('leadForm');
 let modalShown = false;
 
 // Open modal
@@ -48,8 +48,9 @@ function closeModal() {
   modal.classList.remove('active');
 }
 
-// Button click
-leadMagnetBtn.addEventListener('click', openModal);
+// Button clicks
+if (leadMagnetBtn) leadMagnetBtn.addEventListener('click', openModal);
+if (leadMagnetBtn2) leadMagnetBtn2.addEventListener('click', openModal);
 
 // Close button
 modalClose.addEventListener('click', closeModal);
@@ -63,9 +64,4 @@ modal.addEventListener('click', (e) => {
 if (!localStorage.getItem('leadMagnetShown')) {
   setTimeout(openModal, 20000);
 }
-
-// Form submission tracking (optional)
-leadForm.addEventListener('submit', (e) => {
-  localStorage.setItem('leadMagnetSubmitted', 'true');
-});
 
